@@ -8,6 +8,12 @@ public class EjercicioFluxGraphApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EjercicioFluxGraphApplication.class, args);
+		
+		
+		
+		
+		
+		
 	}
 
 }
