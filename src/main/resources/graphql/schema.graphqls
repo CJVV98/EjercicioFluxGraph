@@ -1,0 +1,43 @@
+
+type Mutation{
+	registrarEstudiante(input: Estudiante): Response
+}
+
+
+type Query{
+	consultarEstudiantes: Response,
+	consultarEstudiante(input: String): Response,
+  	saludo: String
+}
+
+input Estudiante {
+	nombre: String!,
+    apellido: String!,
+    documento: String!,
+    edad: Int!,
+    genero: String!
+       
+}
+
+
+interface Entidad {
+   id: ID
+
+}
+
+type EstudianteDto implements Entidad{
+ 	id: ID,
+	nombre: String,
+    apellido: String,
+    edad: Int!
+   
+}
+
+
+type Response {
+	estado: Int,
+	mensaje: String,
+	data: [Entidad]
+	
+}
+
